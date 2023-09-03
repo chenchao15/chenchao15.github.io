@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>LPI</title>
+        <link rel="stylesheet" href="./style.css">
+        <script type="text/javascript" src="./gb3d_bundle.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="navbar-menu">
+              <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                <a class="navbar-item" href="https://niessnerlab.org/members/barbara_roessle/profile.html">
+                <span class="icon">
+                    <i class="fas fa-home"></i>
+                </span>
+                </a>
+          
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                    More Research
+                  </a>
+                  <div class="navbar-dropdown">
+                    <a class="navbar-item" href="https://github.com/chenchao15/drwr">
+                        DRWR (ICML 2020)
+                    </a>
+                    <a class="navbar-item" href="https://github.com/chenchao15/2D_projection_matching">
+                        2D Projection Matching (ICCV 2021)
+                    </a>
+                    <a class="navbar-item" href="https://chenchao15.github.io/LPI_page/">
+                        LPI (ECCV 2022)
+                    </a>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </nav>
+        <div class="container">
+            <div class="paper-title">
+                <div class="col">
+                    <div class="row"> <h2 class="short-title"> Latent Partition Implicit with Surface Codes for 3D Representation </h2> </div>
+                    <div class="row"> <p class="conference-label"> ECCV 2022 </p> </div>
+                </div>
+            </div>
+
+            <div class="authors-list">
+                <div class="row">
+                    <div class="col">
+                        <div class="row"> <p class="author-name"><a href="">Chao Chen</a><sup>1</sup></p> </div>
+                        
+                    </div>
+                    <div class="col">
+                        <div class="row"> <p class="author-name"><a href="https://yushen-liu.github.io/">Yu-Shen Liu</a><sup>1</sup></p> </div>
+
+                    </div>
+                    <div class="col">
+                        <div class="row"> <p class="author-name"><a href="https://h312h.github.io/">Zhizhong Han</a><sup>2</sup></p> </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="row"> <p class="affiliation"><sup>1</sup>School of Software, BNRist,Tsinghua University</p> </div>
+                    </div>
+                    <div class="col">
+                        <div class="row"> <p class="affiliation"><sup>2</sup>Wayne State University</p> </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resource-link">
+                <div class="row">
+                    <div class="col">
+                        <a href="https://github.com/chenchao15/LPI">
+                            <img class="resource-icon" src="./images/code.png" alt="code icon">
+                            <p class="resource-text">Code</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="https://arxiv.org/abs/2207.08631">
+                            <img class="resource-icon" src="./images/paper.png" alt="paper icon">
+                            <p class="resource-text">Paper</p>
+                        </a>
+                    </div>
+					<div class="col">
+                        <a href="https://cloud.tsinghua.edu.cn/f/5d690a9ed5054a8e9416/?dl=1" download="https://cloud.tsinghua.edu.cn/f/5d690a9ed5054a8e9416/?dl=1">
+                            <img class="resource-icon" src="./images/supplement.png" alt="supplement icon">
+                            <p class="resource-text">Supp</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intro-images">
+                <div class="row">
+                    <img class="abstract-img1" src="./images/overview2.png" alt="abstract image"> 
+                </div>
+            </div>
+
+            <section class="section">
+                <div class="container is-max-desktop">
+                      <!-- Paper video. -->
+                      <div class="columns is-centered has-text-centered">
+                        <div class="column is-four-fifths">
+                          <h2 class="title is-3">Video</h2>
+                          <div class="video">
+                            <video width="100%" height="100%" controls autoplay loop>
+                                <source src="./videos/demo.mp4" type="video/mp4"/>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        </div>
+                      </div>
+                      <!--/ Paper video. -->
+                    
+                  <br>
+                  <!-- Abstract. -->
+                  <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                      <h2 class="title is-3">Abstract</h2>
+                      <div class="content has-text-justified">
+                        <p>
+                            Deep implicit functions have shown remarkable shape modeling ability in various 3D computer vision tasks. One drawback is that it is hard for them to represent a 3D shape as multiple parts. Current solutions learn various primitives and blend the primitives directly in the spatial space, which still struggle to approximate the 3D shape accurately. To resolve this problem, we introduce a novel implicit representation to represent a single 3D shape as a set of parts in the latent space, towards both highly accurate and plausibly interpretable shape modeling. Our insight here is that both the part learning and the part blending can be conducted much easier in the latent space than in the spatial space. We name our method Latent Partition Implicit (LPI), because of its ability of casting the global shape modeling into multiple local part modeling, which partitions the global shape unity. LPI represents a shape as Signed Distance Functions (SDFs) using surface codes. Each surface code is a latent code representing a part whose center is on the surface, which enables us to flexibly employ intrinsic attributes of shapes or additional surface properties. Eventually, LPI can reconstruct both the shape and the parts on the shape, both of which are plausible meshes. LPI is a multilevel representation, which can partition a shape into different numbers of parts after training. LPI can be learned without ground truth signed distances, point normals or any supervision for part partition. LPI outperforms the latest methods under the widely used benchmarks in terms of reconstruction accuracy and modeling interpretability.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/ Abstract. -->
+                </div>
+              </section>
+
+            <!--<div class="view-3D">
+                <p class="view-3D-title">
+                    Results:
+                </p>
+                <div>
+                    <h2><strong>Visual comparison with Point2Surf [1] and Neural-pull [2] under ABC dataset.</strong></h2>
+                    
+                    <table class="dataintable">
+                    <tr>
+                    <th style="width:33%;">Point2Surf</th>
+                    <th style="width:33%;">Neural-pull</th>
+                    <th style="width:33%;">Ours</th>
+                    </tr>
+                    
+                    <tr>
+                    <td>
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/abc1_p2s.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </td>
+                    <td>
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/abc1_np.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </td>
+                    <td>
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/abc1_ours.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <model-viewer alt="View reconstruction results in 3D" src="./objects/abc2_p2s.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                        </td>
+                        <td>
+                            <model-viewer alt="View reconstruction results in 3D" src="./objects/abc2_np.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                        </td>
+                        <td>
+                            <model-viewer alt="View reconstruction results in 3D" src="./objects/abc2_ours.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                        </td>
+                    </tr>
+
+                    </table>
+                </div>
+
+                <div>
+                    <h2><strong>We reconstruct highly accurate surfaces from 300K points under FAMOUS dataset.</strong></h2>
+                    
+                    <table class="dataintable">
+                    <tr>
+                    <th style="width:50%;">Liberty</th>
+                    <th style="width:50%;">Dragon</th>
+                    </tr>
+                    
+                    <tr>
+                    <td>
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/Liberty_ours.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </td>
+                    <td>
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/Dragon_ours.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </td>
+                    </tr>
+
+                    
+                    </table>
+                </div>
+
+                <div>
+                    <h2><strong>Surface reconstruction of a real scanned scene with texture.</strong></h2>
+                    
+                    <table class="dataintable">
+                    <tr>
+                    <th style="width:100%;">Input raw point cloud scanned by LiDAR Sensors</th>
+                    </tr>
+                    
+                    <tr>
+                    <td>
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/bim406.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </td>
+                    </tr>
+
+                    
+                    </table>
+                </div>
+
+            </div>-->
+
+            <div class="citation">
+                <p class="citation-title">
+                    Citation
+                </p>
+                <p class="citation-text">
+                    @inproceedings{LPI,</br>
+                        &ensp;&ensp;&ensp;&ensp;title={Latent Partition Implicit with Surface Codes for 3D Representation},</br>
+                        &ensp;&ensp;&ensp;&ensp;author={Chao Chen and Yu-Shen Liu and Zhizhong Han},</br>
+                        &ensp;&ensp;&ensp;&ensp;booktitle={European Conference on Computer Vision (ECCV)},</br>
+                        &ensp;&ensp;&ensp;&ensp;year={2022}</br>
+                    }
+                </p>
+            </div>
+            <div class="citation">
+                <p class="citation-title">
+                    Related Work
+                </p>
+                <p class="citation-text">
+                    <strong>[1]</strong> Philipp Erler, Paul Guerrero, Stefan Ohrhallinger, Niloy J. Mitra, and Michael Wimmer. Points2Surf: Learning implicit surfaces from point clouds. In European Conference on Computer Vision, 2020. 1, 2, 5, 6, 8.</br>
+                    <strong>[2]</strong> Baorui Ma, Zhizhong Han, Yu-Shen Liu, Matthias Zwicker. Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces. International Conference on Machine Learning (ICML), 2021, PMLR 139: 7246-7257.</br>
+                    <strong>[3]</strong> Baorui Ma, Yu-Shen Liu, Zhizhong Han. Reconstructing Surfaces for Sparse Point Clouds with On-Surface Priors. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022.</br>
+                </p>
+            </div>
+            
+        </div>
+        <footer class="footer">
+            <div class="container">
+              <div class="content has-text-centered">
+              </div>
+              <div class="columns is-centered">
+                <div class="column is-8">
+                  <div class="content">
+                    <p style="text-align: center;">
+                      This webpage template is from <a href="https://lity20.github.io/DCCDIF_project_page/">DCCDIF</a>. 
+                      We sincerely thank <a href="https://github.com/lity20/">Tianyang Li</a> for this template.
+                    </p>
+                  </div>
+                </div>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </footer>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </body>
+
+</html>
