@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Learning Consistency-Aware Unsigned Distance Functions Progressively from Raw Point Clouds.">
+  <meta name="keywords" content="系统演示">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>系统演示</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <!-- <script type="text/javascript" src="./gb3d_bundle.js"></script> -->
+  
+</head>
+<body>
+
+<!--<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://junshengzhou.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/junshengzhou/3DAttriFlow">
+            3DAttriFlow
+          </a>
+          <a class="navbar-item" href="https://junshengzhou.github.io/3D-OAE">
+            3D Occlusion Auto-Encoder
+          </a>
+          <a class="navbar-item" href="https://github.com/mabaorui/NeuralPull-Pytorch">
+            Neural-Pull
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>-->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">面向点云重建细节增强的神经隐式表达学习方法</h1>
+          <div class="column is-full_width">
+            <h2 class="title is-4">系统演示</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="margin-top: -20px">第二章 基于局部表面编码的神经隐式表达方法</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container is-centered">
+    <!-- <div class="container is-max-desktop"> -->
+
+      <!-- Results. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths"> -->
+    <div class="view-3D">
+      <p class="view-3D-title">
+          ShapeNet Cars:
+      </p>
+    
+    
+      <div>
+        <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
+        
+        <table class="dataintable">
+        <tr>
+        <th style="width:50%;">Liberty</th>
+        <th style="width:50%;">Dragon</th>
+        </tr>
+        
+        <tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./objects/3DMOdel/NeuralTPS/shapenet/02691156/ours"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./objects/car1.glb"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+		  <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./objects/car1.glb"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+        </tr>
+
+        
+        </table>
+      </div>
+      <p class="view-3D-title">
+        3D Scene:
+      </p>
+      <div>
+        <!-- <h2><strong>Surface reconstruction of a real scanned scene.</strong></h2> -->
+        
+        <table class="dataintable">
+        <tr>
+        <!-- <th style="width:100%;">Surface reconstruction of a real scanned scene.</th> -->
+        </tr>
+        
+        <tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./objects/lounge.glb"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./objects/stonewall.glb"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+        </tr>
+        
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="margin-top: -20px">第三章 基于频域整合先验的神经隐式表达方法</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container is-centered">
+    <!-- <div class="container is-max-desktop"> -->
+
+      <!-- Results. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths"> -->
+    <div class="view-3D">
+      <p class="view-3D-title">
+          ShapeNet:
+      </p>
+    
+    
+      <div>
+        <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
+        
+        <table class="dataintable">
+        <tr>
+        <th style="width:50%;">Low</th>
+        <th style="width:50%;">Full</th>
+        </tr>
+        
+        <tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/pinyu/1_low.glb"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/pinyu/1_low.glb"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+		  <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./objects/car1.glb"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+        </tr>
+
+        
+        </table>
+      </div>
+      <p class="view-3D-title">
+        3D Scene:
+      </p>
+      <div>
+        <!-- <h2><strong>Surface reconstruction of a real scanned scene.</strong></h2> -->
+        
+        <table class="dataintable">
+        <tr>
+        <!-- <th style="width:100%;">Surface reconstruction of a real scanned scene.</th> -->
+        </tr>
+        
+        <tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./objects/lounge.glb"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./objects/stonewall.glb"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+        </tr>
+        
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+</body>
+</html>
