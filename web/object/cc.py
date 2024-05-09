@@ -64,6 +64,6 @@ def create_glb(vertices, normals, texcoords, indices, filename="output.glb"):
     # Save to GLB
     gltf.save_binary(filename)
 
-path = 'pinyu/1_high.ply'
+path = 'pinyu/abc_high.ply'
 mesh = trimesh.load(path)
 mesh.export(path.split('.')[0] + '.glb')

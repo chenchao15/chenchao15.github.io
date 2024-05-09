@@ -267,20 +267,37 @@
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./object/pinyu/1_low.glb"
+            src="./object/pinyu/1_high.glb"
             ar
+			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
             camera-controls
             shadow-intensity="1"
             camera-orbit="auto auto 180deg"
             />
           </td>
-		  <td>
+        </tr>
+		<tr>
+          <td>
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./objects/car1.glb"
+            src="./object/pinyu/1_low.glb"
             ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/pinyu/1_high.glb"
+            ar
+			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
             camera-controls
             shadow-intensity="1"
@@ -292,6 +309,84 @@
         
         </table>
       </div>
+	  
+	  <p class="view-3D-title">
+          ABC:
+      </p>
+    
+    
+      <div>
+        <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
+        
+        <table class="dataintable">
+        <tr>
+        <th style="width:50%;">Low</th>
+        <th style="width:50%;">Full</th>
+        </tr>
+        
+        <tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/pinyu/abc_low.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/pinyu/abc_high.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+        </tr>
+		
+		<tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/pinyu/abc2_low.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/pinyu/abc2_high.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+        </tr>
+        </tr>
+
+        
+        </table>
+      </div>
+	  
       <p class="view-3D-title">
         3D Scene:
       </p>
