@@ -99,6 +99,7 @@
 
 </section>
 
+
 <section class="section">
   <div class="container is-max-desktop">
 
@@ -117,7 +118,7 @@
       <div class="column is-four-fifths"> -->
     <div class="view-3D">
       <p class="view-3D-title">
-          ShapeNet Cars:
+          FAMOUS:
       </p>
     
     
@@ -125,18 +126,15 @@
         <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
         
         <table class="dataintable">
-        <tr>
-        <th style="width:50%;">Liberty</th>
-        <th style="width:50%;">Dragon</th>
-        </tr>
         
         <tr>
           <td>
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./objects/3DMOdel/NeuralTPS/shapenet/02691156/ours"
+            src="./object/lpu/1.glb"
             ar
+			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
             camera-controls
             shadow-intensity="1"
@@ -147,20 +145,37 @@
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./objects/car1.glb"
+            src="./object/lpi/2.glb"
             ar
+			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
             camera-controls
             shadow-intensity="1"
             camera-orbit="auto auto 180deg"
             />
           </td>
-		  <td>
+        </tr>
+		<tr>
+          <td>
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./objects/car1.glb"
+            src="./object/lpi/3.glb"
             ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/lpi/4.glb"
+            ar
+			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
             camera-controls
             shadow-intensity="1"
@@ -172,15 +187,19 @@
         
         </table>
       </div>
-      <p class="view-3D-title">
-        3D Scene:
+	  
+	  <p class="view-3D-title">
+          Local and Global:
       </p>
+    
+    
       <div>
-        <!-- <h2><strong>Surface reconstruction of a real scanned scene.</strong></h2> -->
+        <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
         
         <table class="dataintable">
         <tr>
-        <!-- <th style="width:100%;">Surface reconstruction of a real scanned scene.</th> -->
+        <th style="width:50%;">Local</th>
+        <th style="width:50%;">Global</th>
         </tr>
         
         <tr>
@@ -188,8 +207,22 @@
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./objects/lounge.glb"
+            src="./object/lpi/chair.glb"
             ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/lpi/chair_local.glb"
+            ar
+			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
             camera-controls
             shadow-intensity="1"
@@ -197,13 +230,55 @@
             />
           </td>
         </tr>
-        <tr>
+		<tr>
           <td>
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./objects/stonewall.glb"
+            src="./object/lpi/bunny.glb"
             ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/lpi/bunny_local.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+        </tr>
+		<tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/lpi/human.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/lpi/human_local.glb"
+            ar
+			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
             camera-controls
             shadow-intensity="1"
@@ -217,6 +292,7 @@
     </div>
   </div>
 </section>
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -282,7 +358,7 @@
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./object/pinyu/1_low.glb"
+            src="./object/pinyu/2_low.glb"
             ar
 			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
@@ -295,7 +371,7 @@
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./object/pinyu/1_high.glb"
+            src="./object/pinyu/2_high.glb"
             ar
 			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
@@ -382,29 +458,122 @@
           </td>
         </tr>
         </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="margin-top: -20px">第四章 基于神经薄板样条的神经隐式表达方法</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container is-centered">
+    <!-- <div class="container is-max-desktop"> -->
+
+      <!-- Results. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths"> -->
+    <div class="view-3D">
+      <p class="view-3D-title">
+          ShapeNet:
+      </p>
+    
+    
+      <div>
+        <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
+        
+        <table class="dataintable">
+        <tr>
+        <th style="width:50%;">Sparse Input</th>
+        <th style="width:50%;">Ours</th>
+        </tr>
+        
+        <tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/pinyu/1_pc.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/pinyu/1_mesh.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+        </tr>
+		<tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/pinyu/2_pc.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/pinyu/2_mesh.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+        </tr>
 
         
         </table>
       </div>
 	  
-      <p class="view-3D-title">
-        3D Scene:
+	  <p class="view-3D-title">
+          3D Scene:
       </p>
+    
+    
       <div>
-        <!-- <h2><strong>Surface reconstruction of a real scanned scene.</strong></h2> -->
+        <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
         
         <table class="dataintable">
-        <tr>
-        <!-- <th style="width:100%;">Surface reconstruction of a real scanned scene.</th> -->
-        </tr>
         
         <tr>
           <td>
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./objects/lounge.glb"
+            src="./object/pinyu/1_scene.glb"
             ar
+			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
             camera-controls
             shadow-intensity="1"
@@ -412,13 +581,15 @@
             />
           </td>
         </tr>
-        <tr>
+		
+		<tr>
           <td>
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./objects/stonewall.glb"
+            src="./object/pinyu/2_scene.glb"
             ar
+			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
             camera-controls
             shadow-intensity="1"
@@ -426,12 +597,15 @@
             />
           </td>
         </tr>
+        </tr>
+
         
         </table>
       </div>
     </div>
   </div>
 </section>
+
 
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 

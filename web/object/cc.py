@@ -2,6 +2,7 @@ from pygltflib import GLTF2, Scene, Node, Mesh, Primitive, Buffer, BufferView, A
 from pywavefront import Wavefront
 import trimesh
 import numpy as np
+import os
 
 def load_obj(filename):
     scene = Wavefront(filename, create_materials=True, collect_faces=True)
@@ -64,6 +65,11 @@ def create_glb(vertices, normals, texcoords, indices, filename="output.glb"):
     # Save to GLB
     gltf.save_binary(filename)
 
-path = 'pinyu/abc_high.ply'
-mesh = trimesh.load(path)
-mesh.export(path.split('.')[0] + '.glb')
+path = 'lpi'
+names = os.listdir(path)
+for name in names:
+    if '.glb' in name:
+        continue
+    temp = os.path.join(path, name)
+    mesh = trimesh.load(temp)
+    mesh.export(temp.split('.')[0] + '.glb')
