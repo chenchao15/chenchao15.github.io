@@ -9,6 +9,10 @@
   <title>系统演示</title>
   <link rel="stylesheet" href="./style.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script type="text/javascript" src="threejs/build/three.js"></script>
+    <script type="text/javascript" src="threejs/examples/js/loaders/OBJLoader.js"></script>
+    <script type="text/javascript" src="threejs/examples/js/controls/OrbitControls.js"></script>
+    <script type="text/javascript" src="threejs/examples/js/loaders/MTLLoader.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -474,6 +478,19 @@
       </div>
     </div>
   </div>
+  
+  </div>
+    </div>
+      <div class="container is-centered">
+                    <div>                        
+                        <a class="file"><input type="button" value="载入模型" onclick="getFile()"></a>
+                        <input style="display: none" type="file"  name="file" id="getF" onchange="clickF()">
+                   </div>
+                </div>
+                <div class="clearfix"> </div>
+      </div>
+	  <canvas id="mainCanvs" width="1520px" height="700px"></canvas>
+
   <div class="container is-centered">
     <!-- <div class="container is-max-desktop"> -->
 
@@ -607,6 +624,7 @@
 </section>
 
 
+<script src="function.js"></script>
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 </body>
