@@ -6,7 +6,7 @@ var mesh = null;
 var id = null;
 var init_name = null;
 
-function init2(path) {
+function init(path) {
 	console.log(path)
     CANVAS_WIDTH = 1520;
     CANVAS_HEIGHT = 700;
@@ -15,7 +15,7 @@ function init2(path) {
 	name = path
     //name = 'sucaiku/' + m[2] + '/' + m[1] + '/models/model_normalized.obj';
     //mtlname = 'sucaiku/' + m[2] + '/' + m[1] + '/models/model_normalized2.mtl';
-	mtlname = path + '.mtl'
+	mtlname = path.split('.')[0] + '.mtl'
   var canvas = document.getElementById('mainCanvs')
   renderer = new THREE.WebGLRenderer({//渲染器
     canvas: canvas//画布
@@ -63,7 +63,7 @@ function init2(path) {
   controls.addEventListener('change', render);//监听鼠标、键盘事件
 }
 
-function init(path) {
+function init3(path) {
 	CANVAS_WIDTH = 1520;
     CANVAS_HEIGHT = 700;
     const scene = new THREE.Scene();
@@ -109,20 +109,88 @@ function draw() {//们在重绘函数中让茶壶旋转：
 }
 
 
-function getFile(){
-    $("#getF").click();
+function getFile1(){
+    $("#getF1").click();
 }
 
 var filename="";
-function clickF() {
-    filename=$("#getF").val();
+function clickF1() {
+    filename=$("#getF1").val();
+    console.log(filename);
     var filenames=filename.split("\\");
     filename=filenames[filenames.length-1];
     filename = filename.split('.')[0];
-	console.log(filename);
+	//console.log(filename);
     // $("#lb").text("OK了");
-    name = "3dtiles/" + filename + "/" + filename + ".json";
-	init('object/neuraltps/1_pc.obj');
-    // loading(name);
+    lowfile = "object/pinyu/othercase/" + filename + '.glb'
+    var modelviewer = document.getElementById('low1');
+	modelviewer.setAttribute('src', lowfile);
+
+    highfile = "object/pinyu/othercase/" + filename + '_out.glb'
+    var modelviewer = document.getElementById('high1');
+	modelviewer.setAttribute('src', highfile);
 }
+
+function getFile2(){
+    $("#getF2").click();
+}
+
+var filename="";
+function clickF2() {
+    filename=$("#getF2").val();
+    console.log(filename);
+    var filenames=filename.split("\\");
+    filename=filenames[filenames.length-1];
+    filename = filename.split('.')[0];
+	//console.log(filename);
+    // $("#lb").text("OK了");
+    lowfile = "object/lpi/othercase/" + filename + '.glb'
+    var modelviewer = document.getElementById('global1');
+	modelviewer.setAttribute('src', lowfile);
+
+    highfile = "object/lpi/othercase/" + filename + '_local.glb'
+    var modelviewer = document.getElementById('local1');
+	modelviewer.setAttribute('src', highfile);
+}
+
+function getFile3(){
+    $("#getF3").click();
+}
+
+var filename="";
+function clickF3() {
+    filename=$("#getF3").val();
+    console.log(filename);
+    var filenames=filename.split("\\");
+    filename=filenames[filenames.length-1];
+    filename = filename.split('.')[0];
+	//console.log(filename);
+    // $("#lb").text("OK了");
+    lowfile = "object/neuraltps/othercase/" + filename + '.glb'
+    var modelviewer = document.getElementById('sparse1');
+	modelviewer.setAttribute('src', lowfile);
+
+    highfile = "object/neuraltps/othercase/" + filename + '_out.glb'
+    var modelviewer = document.getElementById('out1');
+	modelviewer.setAttribute('src', highfile);
+}
+
+function getFile4(){
+    $("#getF4").click();
+}
+
+var filename="";
+function clickF4() {
+    filename=$("#getF4").val();
+    console.log(filename);
+    var filenames=filename.split("\\");
+    filename=filenames[filenames.length-1];
+    filename = filename.split('.')[0];
+	//console.log(filename);
+    // $("#lb").text("OK了");
+    lowfile = "object/gp/othercase/" + filename + '.glb'
+    var modelviewer = document.getElementById('fast1');
+	modelviewer.setAttribute('src', lowfile);
+}
+
 

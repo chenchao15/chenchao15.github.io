@@ -65,7 +65,7 @@ def create_glb(vertices, normals, texcoords, indices, filename="output.glb"):
     # Save to GLB
     gltf.save_binary(filename)
 
-path = 'lpi'
+path = 'gp/othercase'
 names = os.listdir(path)
 for name in names:
     if '.glb' in name:

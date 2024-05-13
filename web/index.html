@@ -9,10 +9,10 @@
   <title>系统演示</title>
   <link rel="stylesheet" href="./style.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script type="text/javascript" src="threejs/build/three.js"></script>
-    <script type="text/javascript" src="threejs/examples/js/loaders/OBJLoader.js"></script>
-    <script type="text/javascript" src="threejs/examples/js/controls/OrbitControls.js"></script>
-    <script type="text/javascript" src="threejs/examples/js/loaders/MTLLoader.js"></script>
+  <script type="text/javascript" src="Apps/threejs/build/three.js"></script>
+    <script type="text/javascript" src="Apps/threejs/examples/js/loaders/OBJLoader.js"></script>
+    <script type="text/javascript" src="Apps/threejs/examples/js/controls/OrbitControls.js"></script>
+    <script type="text/javascript" src="Apps/threejs/examples/js/loaders/MTLLoader.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -134,9 +134,10 @@
         <tr>
           <td>
             <model-viewer
+			id="cccc"
             bounds="tight"
             enable-pan
-            src="./object/lpu/1.glb"
+            src="./object/lpi/1.glb"
             ar
 			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
@@ -193,7 +194,7 @@
       </div>
 	  
 	  <p class="view-3D-title">
-          Local and Global:
+         Global and Local:
       </p>
     
     
@@ -202,8 +203,8 @@
         
         <table class="dataintable">
         <tr>
-        <th style="width:50%;">Local</th>
         <th style="width:50%;">Global</th>
+        <th style="width:50%;">Local</th>
         </tr>
         
         <tr>
@@ -293,6 +294,55 @@
         
         </table>
       </div>
+
+    <p class="view-3D-title">
+        其他:
+    </p>
+  
+     <div>                        
+        <a class="file"><input type="button" value="载入模型" onclick="getFile2()"></a>
+        <input style="display: none" type="file"  name="file" id="getF2" onchange="clickF2()">
+    </div>
+    <div>
+      <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
+      
+      <table class="dataintable">
+      <tr>
+      <th style="width:50%;">Global</th>
+      <th style="width:50%;">Local</th>
+      </tr>
+      
+      <tr>
+        <td>
+          <model-viewer
+          bounds="tight"
+          id="global1"
+          enable-pan
+          src=""
+          ar
+          auto-rotate
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          shadow-intensity="1"
+          camera-orbit="auto auto 180deg"
+          />
+        </td>
+        <td>
+          <model-viewer
+          bounds="tight"
+          id="local1"
+          enable-pan
+          src=""
+          ar
+          auto-rotate
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          shadow-intensity="1"
+          camera-orbit="auto auto 180deg"
+          />
+        </td>
+      </tr>
+      </table>
     </div>
   </div>
 </section>
@@ -464,6 +514,56 @@
         </tr>
         </table>
       </div>
+	  
+	  <p class="view-3D-title">
+          其他:
+      </p>
+    
+	   <div>                        
+          <a class="file"><input type="button" value="载入模型" onclick="getFile1()"></a>
+          <input style="display: none" type="file"  name="file" id="getF1" onchange="clickF1()">
+      </div>
+      <div>
+        <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
+        
+        <table class="dataintable">
+        <tr>
+        <th style="width:50%;">Low</th>
+        <th style="width:50%;">Full</th>
+        </tr>
+        
+        <tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            id="low1"
+            enable-pan
+            src=""
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+          <td>
+            <model-viewer
+            bounds="tight"
+            id="high1"
+            enable-pan
+            src=""
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+        </tr>
+        </table>
+      </div>
     </div>
   </div>
 </section>
@@ -481,15 +581,6 @@
   
   </div>
     </div>
-      <div class="container is-centered">
-                    <div>                        
-                        <a class="file"><input type="button" value="载入模型" onclick="getFile()"></a>
-                        <input style="display: none" type="file"  name="file" id="getF" onchange="clickF()">
-                   </div>
-                </div>
-                <div class="clearfix"> </div>
-      </div>
-	  <canvas id="mainCanvs" width="1520px" height="700px"></canvas>
 
   <div class="container is-centered">
     <!-- <div class="container is-max-desktop"> -->
@@ -509,7 +600,7 @@
         <table class="dataintable">
         <tr>
         <th style="width:50%;">Sparse Input</th>
-        <th style="width:50%;">Ours</th>
+        <th style="width:50%;">Result</th>
         </tr>
         
         <tr>
@@ -517,7 +608,7 @@
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./object/pinyu/1_pc.glb"
+            src="./object/neuraltps/1_pc.glb"
             ar
 			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
@@ -530,7 +621,7 @@
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./object/pinyu/1_mesh.glb"
+            src="./object/neuraltps/1_mesh.glb"
             ar
 			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
@@ -545,7 +636,7 @@
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./object/pinyu/2_pc.glb"
+            src="./object/neuraltps/2_pc.glb"
             ar
 			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
@@ -558,7 +649,7 @@
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./object/pinyu/2_mesh.glb"
+            src="./object/neuraltps/2_mesh.glb"
             ar
 			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
@@ -588,7 +679,7 @@
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./object/pinyu/1_scene.glb"
+            src="./object/neuraltps/1_scene.glb"
             ar
 			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
@@ -598,13 +689,24 @@
             />
           </td>
         </tr>
-		
-		<tr>
+        </table>
+      </div>
+	  
+	  <p class="view-3D-title">
+          KITTI:
+      </p>
+    
+      <div>
+        <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
+        
+        <table class="dataintable">
+        
+        <tr>
           <td>
             <model-viewer
             bounds="tight"
             enable-pan
-            src="./object/pinyu/2_scene.glb"
+            src="./object/neuraltps/2_kitti.glb"
             ar
 			auto-rotate
             ar-modes="webxr scene-viewer quick-look"
@@ -614,15 +716,295 @@
             />
           </td>
         </tr>
-        </tr>
-
-        
         </table>
       </div>
+    <p class="view-3D-title">
+        其他:
+    </p>
+  
+     <div>                        
+        <a class="file"><input type="button" value="载入模型" onclick="getFile3()"></a>
+        <input style="display: none" type="file"  name="file" id="getF3" onchange="clickF3()">
+    </div>
+    <div>
+      <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
+      
+      <table class="dataintable">
+      <tr>
+      <th style="width:50%;">Sparse Input</th>
+      <th style="width:50%;">Result</th>
+      </tr>
+      
+      <tr>
+        <td>
+          <model-viewer
+          bounds="tight"
+          id="sparse1"
+          enable-pan
+          src=""
+          ar
+          auto-rotate
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          shadow-intensity="1"
+          camera-orbit="auto auto 180deg"
+          />
+        </td>
+        <td>
+          <model-viewer
+          bounds="tight"
+          id="out1"
+          enable-pan
+          src=""
+          ar
+          auto-rotate
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          shadow-intensity="1"
+          camera-orbit="auto auto 180deg"
+          />
+        </td>
+      </tr>
+      </table>
     </div>
   </div>
 </section>
 
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="margin-top: -20px">第五章 基于快速网格优化的神经隐式表达方法</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-centered">
+    <!-- <div class="container is-max-desktop"> -->
+
+      <!-- Results. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths"> -->
+    <div class="view-3D">
+      <p class="view-3D-title">
+          ShapeNet:
+      </p>
+
+      <div>
+        <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
+        
+        <table class="dataintable">
+        
+        <tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/gp/shapenet1.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/gp/shapenet2.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+        </tr>
+        </table>
+      </div>
+	  
+	  <p class="view-3D-title">
+          FAMOUS:
+      </p>
+    
+      <div>
+        <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
+        
+        <table class="dataintable">
+        <tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/gp/famous1.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+		  <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/gp/famous2.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+        </tr>
+        </table>
+      </div>
+	  
+	  <p class="view-3D-title">
+          Thingi10K:
+      </p>
+    
+      <div>
+        <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
+        
+        <table class="dataintable">
+        <tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/gp/thing10k1.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+		  <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/gp/thing10k2.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+        </tr>
+        </table>
+      </div>
+	  
+	  <p class="view-3D-title">
+          3D FRONT:
+      </p>
+    
+      <div>
+        <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
+        
+        <table class="dataintable">
+        <tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/gp/3dfront1.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+		  <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/gp/3dfront2.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+          </td>
+        </tr>
+        </table>
+      </div>
+	  
+	  <p class="view-3D-title">
+          KITTI:
+      </p>
+    
+      <div>
+        <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
+        
+        <table class="dataintable">
+        
+        <tr>
+          <td>
+            <model-viewer
+            bounds="tight"
+            enable-pan
+            src="./object/gp/kitti.glb"
+            ar
+			auto-rotate
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            shadow-intensity="1"
+            camera-orbit="auto auto 180deg"
+            />
+			
+          </td>
+        </tr>
+        </table>
+      </div>
+      <p class="view-3D-title">
+        其他:
+    </p>
+  
+     <div>                        
+        <a class="file"><input type="button" value="载入模型" onclick="getFile4()"></a>
+        <input style="display: none" type="file"  name="file" id="getF4" onchange="clickF4()">
+    </div>
+    <div>
+      <!-- <h2><strong>We reconstruct highly accurate surfaces from 10K points under ShapeNet Cars dataset.</strong></h2> -->
+      
+      <table class="dataintable">
+      <tr>
+        <td>
+          <model-viewer
+          bounds="tight"
+          id="fast1"
+          enable-pan
+          src=""
+          ar
+          auto-rotate
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          shadow-intensity="1"
+          camera-orbit="auto auto 180deg"
+          />
+        </td>
+      </tr>
+      </table>
+    </div>
+  </div>
+</section>
 
 <script src="function.js"></script>
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
