@@ -2585,8 +2585,8 @@ button {
   .feature-box.feature-box-style-02 .feature-img {
     margin-bottom: 50px; }
     .feature-box.feature-box-style-02 .feature-img img {
-      height: 200px;
-      width: 200px;
+      height: 300px;
+      width: 300px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -2595,6 +2595,22 @@ button {
   .feature-box.feature-box-style-02 .feature-content {
     text-align: center; }
   .feature-box.feature-box-style-02:hover .feature-img img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+
+  .feature-box.feature-box-style-02 .feature-img2 {
+    margin-bottom: 50px; }
+    .feature-box.feature-box-style-02 .feature-img2 img {
+      height: 400px;
+      width: 400px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease; }
+  .feature-box.feature-box-style-02 .feature-content {
+    text-align: center; }
+  .feature-box.feature-box-style-02:hover .feature-img2 img {
     -webkit-transform: scale(1.1);
             transform: scale(1.1); }
 
@@ -2689,7 +2705,9 @@ button {
     border: none;
     padding: 0 20px; }
   .feature-box.feature-box-style-02 .feature-img {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  .feature-box.feature-box-style-02 .feature-img2 {
+      margin-bottom: 20px; } }
 
 @media (max-width: 575px) {
   .feature-box.feature-box-style-04 {
@@ -3529,24 +3547,43 @@ ul.list.list-circle li i {
 /*****************************
   Team
 *****************************/
+.team {
+  display: flex;
+  justify-content: center;  /* 水平居中 */
+  align-items: center;      /* 垂直居中 */
+  flex-direction: column;   /* 垂直排列（图片在上，文字在下） */
+  text-align: center;       /* 文字水平居中 */
+}
+
 .team .team-img {
-  overflow: hidden; }
-  .team .team-img img {
-    -webkit-transition: -webkit-transform .3s;
-    transition: -webkit-transform .3s;
-    transition: transform .3s;
-    transition: transform .3s, -webkit-transform .3s; }
-    .team .team-img img:hover {
-      -webkit-transform: scale(1.2);
-              transform: scale(1.2); }
+  overflow: hidden;
+  display: flex;            /* 使图像容器也是一个 flex 容器 */
+  justify-content: center;  /* 水平居中图片 */
+}
+
+.team .team-img img {
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.team .team-img img:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
 
 .team .team-content .team-name a {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 26px;
   margin-top: 14px;
-  font-weight: normal; }
-  .team .team-content .team-name a:hover {
-    color: #650101; }
+  font-family: "Montserrat";
+  font-weight: normal;
+}
+
+.team .team-content .team-name a:hover {
+  color: #650101;
+}
 
 .team .team-content .team-description {
   text-transform: uppercase;
@@ -3557,19 +3594,21 @@ ul.list.list-circle li i {
   position: relative;
   padding-left: 50px;
   margin-top: 20px;
-  margin-bottom: 5px; }
-  .team .team-content .team-description:before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 40px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    left: 0px;
-    background-color: #650101;
-    z-index: 1; }
+  margin-bottom: 5px;
+}
 
+.team .team-content .team-description:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 40px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0px;
+  background-color: #650101;
+  z-index: 1;
+}
 /*****************************
   Testimonial
 *****************************/
